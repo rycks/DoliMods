@@ -402,7 +402,7 @@ class ActionsConcatPdf
 					$pdf->useTemplate($tplidx);
 
 					//back
-					if($currentcgupagenum < $totalcgupagecount) {
+					if($currentcgupagenum <= $totalcgupagecount) {
 						$pdf->setSourceFile($cgupage[$currentcgupagenum]);
 						$tplidx = $pdf->ImportPage($currentcgupagenum);
 						$s = $pdf->getTemplatesize($tplidx);
